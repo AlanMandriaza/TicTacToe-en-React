@@ -14,6 +14,7 @@ const Semaforo = () => {
   };
 
   return (
+    <>
     <div className="semaforo">
       <div
         className={`luz rojo ${brillar.rojo ? "brillar" : ""}`}
@@ -27,7 +28,11 @@ const Semaforo = () => {
         className={`luz verde ${brillar.verde ? "brillar" : ""}`}
         onClick={() => handleClick("verde")}
       ></div>
+       
+     
     </div>
+    <div className="pilar"></div>
+    </>
   );
 };
 

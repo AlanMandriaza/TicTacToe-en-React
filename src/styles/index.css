@@ -28,11 +28,11 @@ body {
   }
   
   .amarillo {
-    background-color: #ff0;
+    background-color: yellow;
   }
   
   .verde {
-    background-color: #0f0;
+    background-color: rgb(5, 170, 5);
   }
   
  
@@ -40,4 +40,14 @@ body {
         box-shadow: 0px 0px 10px 13px rgb(189 166 166);
       }
 
-  
+      .pilar {
+        border-radius: 5%;
+        height: 253px;
+        width: 30px;
+        margin: 10px 0;
+        background-color: #000;
+        box-shadow: 0px -6px 10px 3px rgb(0 0 0);
+       
+        margin-left: 125px;
+      }
+      
