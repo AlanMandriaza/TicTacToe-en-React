@@ -1,12 +1,34 @@
-//import react into the bundle
-import React from "react";
+import "../styles/index.css";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-// include your styles into the webpack bundle
-import "../styles/index.css";
+const Semaforo = () => {
+  const [brillar, setBrillar] = useState({ rojo: false, amarillo: false, verde: false });
 
-//import your own components
-import Home from "./component/home.jsx";
+  const handleClick = (color) => {
+    setBrillar((prevState) => ({
+      rojo: color === "rojo" ? true : false,
+      amarillo: color === "amarillo" ? true : false,
+      verde: color === "verde" ? true : false,
+    }));
+  };
 
-//render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+  return (
+    <div className="semaforo">
+      <div
+        className={`luz rojo ${brillar.rojo ? "brillar" : ""}`}
+        onClick={() => handleClick("rojo")}
+      ></div>
+      <div
+        className={`luz amarillo ${brillar.amarillo ? "brillar" : ""}`}
+        onClick={() => handleClick("amarillo")}
+      ></div>
+      <div
+        className={`luz verde ${brillar.verde ? "brillar" : ""}`}
+        onClick={() => handleClick("verde")}
+      ></div>
+    </div>
+  );
+};
+
+ReactDOM.render(<Semaforo />, document.getElementById("app"));

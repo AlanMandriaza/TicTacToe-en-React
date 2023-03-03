@@ -1,12 +1,43 @@
+body {
+    background-color: #f5f5f5;
+  }
+  
+  .semaforo {
+    width: 117px;
+    border-radius: 25%;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: #000;
+    box-shadow:  0px 0px 10px 6px rgb(0 0 0);
+  }
+  
+  .luz {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  .rojo {
+    background-color: #f00;
+  }
+  
+  .amarillo {
+    background-color: #ff0;
+  }
+  
+  .verde {
+    background-color: #0f0;
+  }
+  
+ 
+    .brillar {
+        box-shadow: 0px 0px 10px 13px rgb(189 166 166);
+      }
 
-/* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+  
