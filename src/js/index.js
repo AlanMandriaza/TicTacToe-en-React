@@ -1,39 +1,21 @@
-import "../styles/index.css";
 import React, { useState } from "react";
+import "../styles/index.css";
 import ReactDOM from "react-dom";
+import Tablero from './tablero.jsx';
 
-const Semaforo = () => {
-  const [brillar, setBrillar] = useState({ rojo: false, amarillo: false, verde: false });
-
-  const handleClick = (color) => {
-    setBrillar((prevState) => ({
-      rojo: color === "rojo" ? true : false,
-      amarillo: color === "amarillo" ? true : false,
-      verde: color === "verde" ? true : false,
-    }));
-  };
+const App = () => {
+  const [turn, setTurn] = useState('X');
+  const [squares, setSquares] = useState(Array(9).fill(null));
+  const [score, setScore] = useState({
+    X: 0,
+    O: 0,
+  });
 
   return (
-    <>
-    <div className="semaforo">
-      <div
-        className={`luz rojo ${brillar.rojo ? "brillar" : ""}`}
-        onClick={() => handleClick("rojo")}
-      ></div>
-      <div
-        className={`luz amarillo ${brillar.amarillo ? "brillar" : ""}`}
-        onClick={() => handleClick("amarillo")}
-      ></div>
-      <div
-        className={`luz verde ${brillar.verde ? "brillar" : ""}`}
-        onClick={() => handleClick("verde")}
-      ></div>
-       
-     
+    <div className="container">
+      <Tablero squares={squares} turn={turn} />
     </div>
-    <div className="pilar"></div>
-    </>
   );
 };
 
-ReactDOM.render(<Semaforo />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById("app"));
