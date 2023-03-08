@@ -6,23 +6,18 @@ import "../styles/index.css";
 const TicTacToe = () => {
   // Array que representa el tablero del juego, inicializado con 9 elementos nulos
   const [board, setBoard] = useState(Array(9).fill(null));
-
   // Booleano que indica si es el turno del jugador X o del jugador O
   const [isXNext, setIsXNext] = useState(true);
-
   // Variable que almacena el ganador del juego, si lo hay
   const winner = calculateWinner(board);
-
   // Función que se llama cuando el usuario hace clic en un cuadrado del tablero
   function handleClick(index) {
     // Copia el tablero actual
     const newBoard = [...board];
-
     // Si ya hay un ganador o el cuadrado ya tiene una ficha, no se hace nada
     if (winner || newBoard[index]) {
       return;
     }
-
     // Pone la ficha del jugador correspondiente en el cuadrado clickeado
     newBoard[index] = isXNext ? "X" : "O";
 
@@ -47,27 +42,28 @@ const TicTacToe = () => {
 
   // Renderiza el tablero del juego
   return (
-    <div>
-      <div className="status">{status}</div>
-      <div className="board-row">
+    <div className="status">{status}
+    <div className="container">
+    
+      <div className="board-row  d-flex bottom">
         {renderSquare(0)}
         {renderSquare(1)}
         {renderSquare(2)}
       </div>
-      <div className="board-row">
+      <div className="board-row d-flex bottom">
         {renderSquare(3)}
         {renderSquare(4)}
         {renderSquare(5)}
       </div>
-      <div className="board-row">
+      <div className="board-row  d-flex ">
         {renderSquare(6)}
         {renderSquare(7)}
         {renderSquare(8)}
       </div>
+      </div>
     </div>
   );
 };
-
 // Función que determina el ganador del juego a partir de un array que representa el tablero
 function calculateWinner(squares) {
   // Array con todas las combinaciones ganadoras posibles
@@ -91,4 +87,3 @@ function calculateWinner(squares) {
 }
 
 ReactDOM.render(<TicTacToe />, document.getElementById("app"));
-//edrtdfgdfg
