@@ -14,11 +14,11 @@ const TicTacToe = () => {
   function handleClick(index) {
     // Copia el tablero actual
     const newBoard = [...board];
-    // Si ya hay un ganador o el cuadrado ya tiene una ficha, no se hace nada
+    // Si ya hay un ganador o el cuadrado ya tiene una jugada, no se hace nada
     if (winner || newBoard[index]) {
       return;
     }
-    // Pone la ficha del jugador correspondiente en el cuadrado clickeado
+    // Pone la jugada del jugador correspondiente en el cuadrado clickeado
     newBoard[index] = isXNext ? "X" : "O";
 
     // Actualiza el tablero y cambia el turno al siguiente jugador
