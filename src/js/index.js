@@ -73,13 +73,14 @@ const TicTacToe = () => {
   // Renderiza el tablero del juego
 
   return (
+    
     <div className="container2">
       <div className="status">
 
         <div className="container">
           {status}
 
-          <div className="board-row  d-flex bottom">
+          <div className="board-row  d-flex bottom up">
             {renderSquare(0)}
             {renderSquare(1)}
             {renderSquare(2)}
@@ -95,7 +96,7 @@ const TicTacToe = () => {
             {renderSquare(8)}
           </div>
           <button className="reset btn btn-light" onClick={handleReset}>
-            Reiniciar juego
+            Reset
           </button>
         </div>
       </div>
