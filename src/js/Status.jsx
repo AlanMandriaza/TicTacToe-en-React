@@ -5,11 +5,11 @@ const Status = ({ winner, isXNext, player1, player2 }) => {
   let statusText;
 
   if (winner) {
-    statusText = `Fin del juego, el jugador ganador es ${
+    statusText = `Game over, the winning player is${
       winner === "X" ? player1 : player2
     }`;
   } else {
-    statusText = `Siguiente jugador: ${isXNext ? player1 : player2}`;
+    statusText = `Next player ${isXNext ? player1 : player2}`;
 
     
   }

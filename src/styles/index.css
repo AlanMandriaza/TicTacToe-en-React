@@ -6,42 +6,47 @@
   font-weight: bold;
   background-color: #5d5853;
   color: rgb(182, 182, 182);
-  border:none;
+  border: none;
 }
-
 body {
   background-color: #5d5853;
 }
-
 .bottom {
   border-bottom: 1px solid rgb(207, 196, 196);
- 
 }
-.square:nth-child(3n+1) {
+.square:nth-child(3n + 1) {
   border-right: 1px solid rgb(207, 196, 196);
 }
-
-.square:nth-child(3n+2) {
+.square:nth-child(3n + 2) {
   border-right: 1px solid rgb(207, 196, 196);
 }
-
-.board-row{
+.board-row {
   width: 540px;
 }
-
-.status{
+.status {
   font-size: 37px;
   font-weight: 700;
   color: #e9ecef;
-
 }
-
 .reset {
   font-size: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
-
 .up {
- 
-    margin-top: 20px;
+  margin-top: 20px;
 }
+label {
+  padding-right: 10px;
+}
+.inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-container {
+  margin-top: 30%;
+  margin-left: 33%;
+  font-size: 15px;
+}
+
+

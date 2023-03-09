@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/index.css";
 
 const Home = ({ handleStart }) => {
   const [player1, setPlayer1] = useState("");
@@ -20,32 +21,35 @@ const Home = ({ handleStart }) => {
   }
 
   return (
-    <div>
-      <h1>Bienvenido al juego Tic Tac Toe</h1>
-      <div>
-        <label htmlFor="player1">Jugador 1:</label>
+    <div className="home-container">
+      {/* Título del componente */}
+      <h1>Enter player names</h1>
+      {/* Contenedor del formulario */}
+      <div className="form-container">
+        {/* Campo de texto para jugador 1 */}
         <input
           type="text"
           id="player1"
+          placeholder="Player one username"
           value={player1}
           onChange={handlePlayer1Change}
         />
-      </div>
-      <div>
-        <label htmlFor="player2">Jugador 2:</label>
+        {/* Campo de texto para jugador 2 */}
         <input
           type="text"
           id="player2"
+          placeholder="Player two username"
           value={player2}
           onChange={handlePlayer2Change}
         />
       </div>
+      {/* Botón de inicio */}
       <button
-        className="start btn btn-light"
+        className="btn btn-light btn-sm"
         onClick={handleStartClick}
         disabled={isStartDisabled}
       >
-        Comenzar
+        Start
       </button>
     </div>
   );
