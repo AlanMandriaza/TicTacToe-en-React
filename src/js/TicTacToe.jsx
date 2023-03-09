@@ -3,7 +3,7 @@ import Board from "./Board.jsx";
 import Status from "./Status.jsx";
 import ResetButton from "./ResetButton.jsx";
 
-const TicTacToe = () => {
+const TicTacToe = ({ player1, player2 }) => {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [isXNext, setIsXNext] = useState(true);
   const winner = calculateWinner(board);
@@ -28,7 +28,8 @@ const TicTacToe = () => {
 
   return (
     <div className="container2">
-      <Status winner={winner} isXNext={isXNext} />
+      <h2>{`Jugando: ${player1} vs ${player2}`}</h2>
+      <Status winner={winner} isXNext={isXNext} player1={player1} player2={player2} />
       <div className="container">
         <Board board={board} handleClick={handleClick} />
         <ResetButton handleReset={handleReset} />

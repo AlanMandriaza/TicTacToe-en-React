@@ -1,6 +1,7 @@
 import React from "react";
 
 const Board = ({ board, handleClick }) => {
+  // Función que devuelve un botón cuadrado con el valor correspondiente en el tablero
   function renderSquare(index) {
     return (
       <button className="square" onClick={() => handleClick(index)}>
@@ -8,6 +9,8 @@ const Board = ({ board, handleClick }) => {
       </button>
     );
   }
+
+  // Renderiza el tablero del juego
   return (
     <div>
       <div className="board-row  d-flex bottom up">
